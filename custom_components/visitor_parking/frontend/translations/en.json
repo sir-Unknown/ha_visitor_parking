@@ -1,0 +1,44 @@
+{
+  "common": {
+    "working": "Working…",
+    "dash": "—"
+  },
+  "active_reservation_card": {
+    "card_name": "Visitor Parking",
+    "card_description": "Show active reservations and end them.",
+    "default_title": "Visitor Parking",
+    "service": "Service",
+    "all_services": "All services",
+    "title": "Title (optional)",
+    "set_entity_error": "Select a `config entry` in the editor, or set `config_entry_id` manually",
+    "entity_not_found": "Entity not found: {entity}",
+    "no_active_reservations": "No active reservations",
+    "reservation_fallback_label": "Reservation",
+    "end": "End"
+  },
+  "new_reservation_card": {
+    "card_name": "Visitor Parking - new reservation",
+    "card_description": "Create a new reservation with favorites support.",
+    "default_title": "New reservation",
+    "set_meldnummer_error": "Select a service to continue.",
+    "missing_favorites_warning": "No favorites found for this service.",
+    "service": "Service",
+    "service_placeholder": "Select a service",
+    "select_service_error": "Select a service before continuing.",
+    "favorites": "Favorites",
+    "favorite_fallback_label": "Favorite",
+    "name": "Name",
+    "license_plate_required": "License plate (required)",
+    "add_to_favorites": "Add to favorites",
+    "remove_favorite": "Remove favorite",
+    "update_favorite": "Update favorite",
+    "check_in": "Check in",
+    "submit": "Check in",
+    "license_plate_required_error": "Enter a license plate",
+    "favorite_name_required_error": "Enter a name to save the favorite",
+    "could_not_save_favorite": "Could not save favorite",
+    "could_not_remove_favorite": "Could not remove favorite",
+    "could_not_update_favorite": "Could not update favorite",
+    "could_not_submit": "Could not submit the reservation"
+  }
+}

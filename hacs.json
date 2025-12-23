@@ -1,0 +1,6 @@
+{
+  "name": "Visitor Parking",
+  "domains": ["visitor_parking"],
+  "content_in_root": false,
+  "render_readme": true
+}

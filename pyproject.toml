@@ -1,0 +1,16 @@
+[tool.pytest.ini_options]
+addopts = "-ra"
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.13"
+warn_unused_configs = true
+show_error_codes = true
+pretty = true
+strict_optional = true
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88

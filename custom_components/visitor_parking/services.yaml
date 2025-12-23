@@ -1,0 +1,157 @@
+create_reservation:
+  name: Create reservation
+  description: Create a visitor parking reservation.
+  fields:
+    config_entry_id:
+      name: Config entry ID
+      description: Optional. Required when you have multiple Visitor Parking integrations configured.
+      required: false
+      selector:
+        text:
+    license_plate:
+      name: License plate
+      description: License plate (for example `AB12CD`).
+      required: true
+      selector:
+        text:
+    name:
+      name: Name
+      description: Optional label for the reservation.
+      required: false
+      selector:
+        text:
+    start_time:
+      name: Start time
+      description: Optional. Start time as a datetime string, for example `2025-12-15T10:16:57Z`. If you omit this and `start_time_entity_id`, the service uses the current time.
+      required: false
+      selector:
+        text:
+    start_time_entity_id:
+      name: Start time entity
+      description: Optional. A `datetime` entity to use as the start time.
+      required: false
+      selector:
+        entity:
+          domain: datetime
+    end_time:
+      name: End time
+      description: Optional. End time as a datetime string. If omitted, the integration uses the provider defaults when available.
+      required: false
+      selector:
+        text:
+    end_time_entity_id:
+      name: End time entity
+      description: Optional. A `datetime` entity to use as the end time.
+      required: false
+      selector:
+        entity:
+          domain: datetime
+
+delete_reservation:
+  name: Delete reservation
+  description: Delete a visitor parking reservation by its ID.
+  fields:
+    config_entry_id:
+      name: Config entry ID
+      description: Optional. Required when you have multiple Visitor Parking integrations configured.
+      required: false
+      selector:
+        text:
+    reservation_id:
+      name: Reservation ID
+      description: Reservation ID returned by the provider.
+      required: true
+      selector:
+        text:
+
+adjust_reservation_end_time:
+  name: Adjust reservation end time
+  description: Adjust the end time of an existing reservation.
+  fields:
+    config_entry_id:
+      name: Config entry ID
+      description: Optional. Required when you have multiple Visitor Parking integrations configured.
+      required: false
+      selector:
+        text:
+    reservation_id:
+      name: Reservation ID
+      description: Reservation ID returned by the provider.
+      required: true
+      selector:
+        text:
+    end_time:
+      name: End time
+      description: New end time as a datetime string, for example `2025-12-15T10:16:57Z`.
+      required: true
+      selector:
+        text:
+
+create_favorite:
+  name: Create favorite
+  description: Create a favorite for use in the favorites dropdown.
+  fields:
+    config_entry_id:
+      name: Config entry ID
+      description: Optional. Required when you have multiple Visitor Parking integrations configured.
+      required: false
+      selector:
+        text:
+    name:
+      name: Name
+      description: Favorite name.
+      required: true
+      selector:
+        text:
+    license_plate:
+      name: License plate
+      description: License plate (for example `AB12CD`).
+      required: true
+      selector:
+        text:
+
+delete_favorite:
+  name: Delete favorite
+  description: Delete a favorite by its ID. DVSPortal does not support this action.
+  fields:
+    config_entry_id:
+      name: Config entry ID
+      description: Optional. Required when you have multiple Visitor Parking integrations configured.
+      required: false
+      selector:
+        text:
+    favorite_id:
+      name: Favorite ID
+      description: Favorite ID returned by the provider.
+      required: true
+      selector:
+        text:
+
+update_favorite:
+  name: Update favorite
+  description: Update a favorite by its ID.
+  fields:
+    config_entry_id:
+      name: Config entry ID
+      description: Optional. Required when you have multiple Visitor Parking integrations configured.
+      required: false
+      selector:
+        text:
+    favorite_id:
+      name: Favorite ID
+      description: Favorite ID returned by the provider.
+      required: true
+      selector:
+        text:
+    name:
+      name: Name
+      description: Favorite name.
+      required: true
+      selector:
+        text:
+    license_plate:
+      name: License plate
+      description: License plate (for example `AB12CD`).
+      required: true
+      selector:
+        text:

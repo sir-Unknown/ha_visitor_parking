@@ -1,0 +1,188 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Visitor Parking",
+        "description": "Select your municipality to connect your visitor parking account.",
+        "data": {
+          "municipality": "Municipality"
+        },
+        "data_description": {
+          "municipality": "Select your municipality."
+        }
+      },
+      "credentials": {
+        "title": "Connect to {provider_label}",
+        "description": "Enter your {provider_label} credentials.",
+        "data": {
+          "api_host": "{api_host_label}",
+          "username": "{username_label}",
+          "identifier": "{identifier_label}",
+          "password": "{password_label}"
+        },
+        "data_description": {
+          "api_host": "{api_host_description}",
+          "username": "{username_description}",
+          "identifier": "{identifier_description}",
+          "password": "{password_description}"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "Your credentials are no longer valid. Enter your updated password.",
+        "data": {
+          "password": "Password"
+        },
+        "data_description": {
+          "password": "Enter your updated password."
+        }
+      }
+    },
+    "abort": {
+      "wrong_account": "This account does not match the existing configuration."
+    },
+    "error": {
+      "cannot_connect": "Cannot connect. Check your internet connection.",
+      "invalid_auth": "Authentication failed. Check your credentials.",
+      "missing_account_id": "Could not determine your account id. Try again later.",
+      "invalid_host": "Select a municipality.",
+      "missing_username": "Enter a registration number.",
+      "missing_identifier": "Enter a registration number.",
+      "missing_password": "Enter a password.",
+      "unknown": "Unexpected error. Try again later."
+    }
+  },
+  "options": {
+    "error": {
+      "description_required": "Enter a description.",
+      "invalid_time": "Enter times in HH:MM format.",
+      "invalid_time_range": "Start and end time cannot be the same.",
+      "no_workdays_selected": "Select at least one day."
+    },
+    "step": {
+      "init": {
+        "title": "Edit description",
+        "description": "Update the description and schedule. Times are only required for enabled days. If the start time is after the end time, the schedule continues into the next day.",
+        "data": {
+          "description": "Description",
+          "auto_end_enabled": "Automatically end reservations"
+        },
+        "sections": {
+          "schedule": {
+            "name": "Schedule",
+            "data": {
+              "mon_enabled": "Monday",
+              "mon_from": "Monday from (HH:MM)",
+              "mon_to": "Monday to (HH:MM)",
+              "tue_enabled": "Tuesday",
+              "tue_from": "Tuesday from (HH:MM)",
+              "tue_to": "Tuesday to (HH:MM)",
+              "wed_enabled": "Wednesday",
+              "wed_from": "Wednesday from (HH:MM)",
+              "wed_to": "Wednesday to (HH:MM)",
+              "thu_enabled": "Thursday",
+              "thu_from": "Thursday from (HH:MM)",
+              "thu_to": "Thursday to (HH:MM)",
+              "fri_enabled": "Friday",
+              "fri_from": "Friday from (HH:MM)",
+              "fri_to": "Friday to (HH:MM)",
+              "sat_enabled": "Saturday",
+              "sat_from": "Saturday from (HH:MM)",
+              "sat_to": "Saturday to (HH:MM)",
+              "sun_enabled": "Sunday",
+              "sun_from": "Sunday from (HH:MM)",
+              "sun_to": "Sunday to (HH:MM)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "account": {
+        "name": "Account"
+      },
+      "favorites": {
+        "name": "Favorites"
+      },
+      "reservations": {
+        "name": "Reservations"
+      }
+    }
+  },
+  "exceptions": {
+    "config_entry_not_loaded": {
+      "message": "The config entry is not loaded."
+    },
+    "could_not_create_favorite": {
+      "message": "Could not create favorite: {error}"
+    },
+    "could_not_delete_favorite": {
+      "message": "Could not delete favorite: {error}"
+    },
+    "could_not_update_favorite": {
+      "message": "Could not update favorite: {error}"
+    },
+    "could_not_adjust_reservation": {
+      "message": "Could not adjust reservation: {error}"
+    },
+    "could_not_create_reservation": {
+      "message": "Could not create reservation: {error}"
+    },
+    "could_not_delete_reservation": {
+      "message": "Could not delete reservation: {error}"
+    },
+    "could_not_determine_zone_end_time": {
+      "message": "Could not determine zone end time"
+    },
+    "datetime_entity_no_value": {
+      "message": "The `{field}` entity `{entity_id}` has no value"
+    },
+    "datetime_entity_not_found": {
+      "message": "The `{field}` entity `{entity_id}` was not found"
+    },
+    "end_time_must_be_after_start_time": {
+      "message": "End time must be after start time"
+    },
+    "end_time_must_be_before_zone_end_time": {
+      "message": "End time must be before the zone end time"
+    },
+    "invalid_datetime_string": {
+      "message": "`{field}` must be a datetime string, got: {value}"
+    },
+    "invalid_identifier": {
+      "message": "`{field}` must be a valid identifier"
+    },
+    "missing_favorite_name": {
+      "message": "Set a name before creating a favorite"
+    },
+    "missing_license_plate": {
+      "message": "Enter a license plate"
+    },
+    "no_config_entries_loaded": {
+      "message": "No config entries are loaded. Add the integration first."
+    },
+    "reservation_not_available": {
+      "message": "Reservation is not available"
+    },
+    "reservation_start_time_not_available": {
+      "message": "Reservation start time is not available"
+    },
+    "set_config_entry_id_multiple_entries": {
+      "message": "Set `config_entry_id` because multiple entries are configured"
+    },
+    "start_time_after_working_to": {
+      "message": "This reservation starts after the configured end time ({working_to}). Create it after {zone_end}, or adjust your schedule."
+    },
+    "action_not_supported": {
+      "message": "This provider does not support the requested action: {error}"
+    },
+    "adjust_not_supported": {
+      "message": "This provider does not support adjusting reservation end times"
+    },
+    "favorite_delete_not_supported": {
+      "message": "This provider does not support deleting favorites"
+    }
+  }
+}

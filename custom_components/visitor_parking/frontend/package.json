@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.27.1",
+    "lit": "^3.0.0"
+  },
+  "scripts": {
+    "build": "esbuild src/visitor-parking-active-reservation-card.ts src/visitor-parking-new-reservation-card.ts --bundle --format=esm --target=es2021 --outdir=dist"
+  }
+}

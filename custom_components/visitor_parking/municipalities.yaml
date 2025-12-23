@@ -1,0 +1,180 @@
+providers:
+  dvsportal:
+    label: DVSPortal
+    unique_id_strategy: identifier
+    fields:
+      - key: api_host
+        source: municipality
+        required: true
+        show: false
+        validator: api_host
+        error_key: invalid_host
+        label: Gemeente
+        label_translations:
+          en: Municipality
+        description: Selecteer je gemeente.
+        description_translations:
+          en: Select your municipality.
+      - key: identifier
+        required: true
+        label: Meldnummer
+        label_translations:
+          en: Registration number
+        description: Vul je meldnummer in.
+        description_translations:
+          en: Enter your registration number.
+      - key: password
+        required: true
+        label: Pincode
+        label_translations:
+          en: Pin code
+        description: Vul je pincode in.
+        description_translations:
+          en: Enter your pin code.
+  the_hague:
+    label: Parkeren Den Haag
+    label_translations:
+      en: The Hague Parking
+    unique_id_strategy: account_id
+    fields:
+      - key: api_host
+        source: municipality
+        required: true
+        show: false
+        validator: api_host
+        error_key: invalid_host
+        label: Gemeente
+        label_translations:
+          en: Municipality
+        description: Selecteer je gemeente.
+        description_translations:
+          en: Select your municipality.
+      - key: username
+        required: true
+        label: Meldnummer
+        label_translations:
+          en: Registration number
+        description: Vul je meldnummer in.
+        description_translations:
+          en: Enter your registration number.
+      - key: password
+        required: true
+        label: Pincode
+        label_translations:
+          en: Pin code
+        description: Vul je pincode in.
+        description_translations:
+          en: Enter your pin code.
+municipalities:
+  - name: Apeldoorn
+    provider: dvsportal
+    api_host: parkeren.apeldoorn.nl
+  - name: Bloemendaal
+    provider: dvsportal
+    api_host: parkeren.bloemendaal.nl
+  - name: Delft
+    provider: dvsportal
+    api_host: vergunningen.parkerendelft.com
+  - name: Den Haag
+    provider: the_hague
+    name_translations:
+      en: The Hague
+    api_host: parkerendenhaag.denhaag.nl
+  - name: Doetinchem (via Buha)
+    provider: dvsportal
+    api_host: parkeren.buha.nl
+  - name: Groningen
+    provider: dvsportal
+    api_host: aanvraagparkeren.groningen.nl
+  - name: Haarlem
+    provider: dvsportal
+    api_host: parkeren.haarlem.nl
+  - name: Harlingen
+    provider: dvsportal
+    api_host: parkeervergunningen.harlingen.nl
+  - name: Heemstede
+    provider: dvsportal
+    api_host: parkeren.heemstede.nl
+  - name: Heerenveen
+    provider: dvsportal
+    api_host: parkeren.heerenveen.nl
+  - name: Heerlen
+    provider: dvsportal
+    api_host: parkeren.heerlen.nl
+  - name: Hengelo
+    provider: dvsportal
+    api_host: parkeren.hengelo.nl
+  - name: Den Bosch
+    provider: dvsportal
+    api_host: parkeren.s-hertogenbosch.nl
+  - name: Katwijk
+    provider: dvsportal
+    api_host: parkeren.katwijk.nl
+  - name: Leiden
+    provider: dvsportal
+    api_host: parkeren.leiden.nl
+  - name: Leidschendam-Voorburg
+    provider: dvsportal
+    api_host: parkeren.lv.nl
+  - name: Middelburg
+    provider: dvsportal
+    api_host: parkeren.middelburg.nl
+  - name: Nijmegen
+    provider: dvsportal
+    api_host: parkeerproducten.nijmegen.nl
+  - name: Nissewaard
+    provider: dvsportal
+    api_host: parkeren.nissewaard.nl
+  - name: Oldenzaal
+    provider: dvsportal
+    api_host: parkeren.oldenzaal.nl
+  - name: Rijswijk
+    provider: dvsportal
+    api_host: parkeren.rijswijk.nl
+  - name: Roermond
+    provider: dvsportal
+    api_host: parkeren.roermond.nl
+  - name: Schouwen-Duiveland
+    provider: dvsportal
+    api_host: parkeren.schouwen-duiveland.nl
+  - name: Sittard-Geleen
+    provider: dvsportal
+    api_host: parkeren.sittard-geleen.nl
+  - name: Smallingerland
+    provider: dvsportal
+    api_host: parkeren.smallingerland.nl
+  - name: Súdwest-Fryslân
+    provider: dvsportal
+    api_host: parkeren.sudwestfryslan.nl
+    name_translations:
+      en: Sudwest-Fryslan
+  - name: Veere
+    provider: dvsportal
+    api_host: parkeren.veere.nl
+  - name: Venlo
+    provider: dvsportal
+    api_host: parkeren.venlo.nl
+  - name: Vlissingen
+    provider: dvsportal
+    api_host: parkeren.vlissingen.nl
+  - name: Waadhoeke
+    provider: dvsportal
+    api_host: parkeren.waadhoeke.nl
+  - name: Waalwijk
+    provider: dvsportal
+    api_host: parkeren.waalwijk.nl
+  - name: Weert
+    provider: dvsportal
+    api_host: parkeerloket.weert.nl
+  - name: Zaanstad
+    provider: dvsportal
+    api_host: parkeren.zaanstad.nl
+  - name: Zevenaar
+    provider: dvsportal
+    api_host: parkeren.zevenaar.nl
+  - name: Zutphen
+    provider: dvsportal
+    api_host: parkeren.zutphen.nl
+  - name: Zwolle
+    provider: dvsportal
+    api_host: parkeerloket.zwolle.nl

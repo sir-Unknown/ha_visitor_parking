@@ -1,0 +1,188 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Koppel Visitor Parking",
+        "description": "Selecteer je gemeente om je bezoekersparkeeraccount te koppelen.",
+        "data": {
+          "municipality": "Gemeente"
+        },
+        "data_description": {
+          "municipality": "Selecteer je gemeente."
+        }
+      },
+      "credentials": {
+        "title": "Koppel {provider_label}",
+        "description": "Vul je {provider_label}-accountgegevens in.",
+        "data": {
+          "api_host": "{api_host_label}",
+          "username": "{username_label}",
+          "identifier": "{identifier_label}",
+          "password": "{password_label}"
+        },
+        "data_description": {
+          "api_host": "{api_host_description}",
+          "username": "{username_description}",
+          "identifier": "{identifier_description}",
+          "password": "{password_description}"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Opnieuw aanmelden",
+        "description": "Je accountgegevens zijn niet meer geldig. Vul je bijgewerkte wachtwoord in.",
+        "data": {
+          "password": "Wachtwoord"
+        },
+        "data_description": {
+          "password": "Vul je bijgewerkte wachtwoord in."
+        }
+      }
+    },
+    "abort": {
+      "wrong_account": "Dit account komt niet overeen met de bestaande configuratie."
+    },
+    "error": {
+      "cannot_connect": "Kan geen verbinding maken. Controleer je internetverbinding.",
+      "invalid_auth": "Aanmelden mislukt. Controleer je accountgegevens.",
+      "missing_account_id": "Kan je account-id niet bepalen. Probeer het later opnieuw.",
+      "invalid_host": "Selecteer een gemeente.",
+      "missing_username": "Vul een meldnummer in.",
+      "missing_identifier": "Vul een meldnummer in.",
+      "missing_password": "Vul een wachtwoord in.",
+      "unknown": "Onverwachte fout. Probeer het later opnieuw."
+    }
+  },
+  "options": {
+    "error": {
+      "description_required": "Vul een beschrijving in.",
+      "invalid_time": "Vul tijden in als HH:MM.",
+      "invalid_time_range": "De starttijd en eindtijd mogen niet hetzelfde zijn.",
+      "no_workdays_selected": "Selecteer minimaal één dag."
+    },
+    "step": {
+      "init": {
+        "title": "Beschrijving aanpassen",
+        "description": "Wijzig de beschrijving en werktijden. Tijden zijn alleen verplicht voor ingeschakelde dagen. Als de starttijd later is dan de eindtijd, loopt het schema door tot de volgende dag.",
+        "data": {
+          "description": "Beschrijving",
+          "auto_end_enabled": "Reserveringen automatisch afmelden"
+        },
+        "sections": {
+          "schedule": {
+            "name": "Werktijden",
+            "data": {
+              "mon_enabled": "Maandag",
+              "mon_from": "Maandag van (HH:MM)",
+              "mon_to": "Maandag tot (HH:MM)",
+              "tue_enabled": "Dinsdag",
+              "tue_from": "Dinsdag van (HH:MM)",
+              "tue_to": "Dinsdag tot (HH:MM)",
+              "wed_enabled": "Woensdag",
+              "wed_from": "Woensdag van (HH:MM)",
+              "wed_to": "Woensdag tot (HH:MM)",
+              "thu_enabled": "Donderdag",
+              "thu_from": "Donderdag van (HH:MM)",
+              "thu_to": "Donderdag tot (HH:MM)",
+              "fri_enabled": "Vrijdag",
+              "fri_from": "Vrijdag van (HH:MM)",
+              "fri_to": "Vrijdag tot (HH:MM)",
+              "sat_enabled": "Zaterdag",
+              "sat_from": "Zaterdag van (HH:MM)",
+              "sat_to": "Zaterdag tot (HH:MM)",
+              "sun_enabled": "Zondag",
+              "sun_from": "Zondag van (HH:MM)",
+              "sun_to": "Zondag tot (HH:MM)"
+            }
+          }
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "account": {
+        "name": "Account"
+      },
+      "favorites": {
+        "name": "Favorieten"
+      },
+      "reservations": {
+        "name": "Reserveringen"
+      }
+    }
+  },
+  "exceptions": {
+    "config_entry_not_loaded": {
+      "message": "De configuratie is niet geladen."
+    },
+    "could_not_create_favorite": {
+      "message": "Favoriet opslaan mislukt: {error}"
+    },
+    "could_not_delete_favorite": {
+      "message": "Favoriet verwijderen mislukt: {error}"
+    },
+    "could_not_update_favorite": {
+      "message": "Favoriet bijwerken mislukt: {error}"
+    },
+    "could_not_adjust_reservation": {
+      "message": "Reservering aanpassen mislukt: {error}"
+    },
+    "could_not_create_reservation": {
+      "message": "Reservering maken mislukt: {error}"
+    },
+    "could_not_delete_reservation": {
+      "message": "Reservering verwijderen mislukt: {error}"
+    },
+    "could_not_determine_zone_end_time": {
+      "message": "Kan de zone-eindtijd niet bepalen"
+    },
+    "datetime_entity_no_value": {
+      "message": "De `{field}`-entiteit `{entity_id}` heeft geen waarde"
+    },
+    "datetime_entity_not_found": {
+      "message": "De `{field}`-entiteit `{entity_id}` is niet gevonden"
+    },
+    "end_time_must_be_after_start_time": {
+      "message": "De eindtijd moet na de starttijd liggen"
+    },
+    "end_time_must_be_before_zone_end_time": {
+      "message": "De eindtijd moet voor de zone-eindtijd liggen"
+    },
+    "invalid_datetime_string": {
+      "message": "`{field}` moet een datum/tijd zijn, maar is: {value}"
+    },
+    "invalid_identifier": {
+      "message": "`{field}` moet een geldige identificatie zijn"
+    },
+    "missing_favorite_name": {
+      "message": "Vul een naam in voordat je een favoriet opslaat"
+    },
+    "missing_license_plate": {
+      "message": "Vul een kenteken in"
+    },
+    "no_config_entries_loaded": {
+      "message": "Er zijn geen configuraties geladen. Voeg eerst de integratie toe."
+    },
+    "reservation_not_available": {
+      "message": "De reservering is niet beschikbaar"
+    },
+    "reservation_start_time_not_available": {
+      "message": "De starttijd van de reservering is niet beschikbaar"
+    },
+    "set_config_entry_id_multiple_entries": {
+      "message": "Stel `config_entry_id` in omdat er meerdere configuraties zijn"
+    },
+    "start_time_after_working_to": {
+      "message": "Deze reservering start na de ingestelde eindtijd ({working_to}). Maak de reservering na {zone_end}, of pas je werktijden aan."
+    },
+    "action_not_supported": {
+      "message": "Deze provider ondersteunt de gevraagde actie niet: {error}"
+    },
+    "adjust_not_supported": {
+      "message": "Deze provider ondersteunt het aanpassen van reserveringseindtijden niet"
+    },
+    "favorite_delete_not_supported": {
+      "message": "Deze provider ondersteunt het verwijderen van favorieten niet"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "common": {
+    "working": "Bezig…",
+    "dash": "—"
+  },
+  "active_reservation_card": {
+    "card_name": "Visitor Parking",
+    "card_description": "Toon actieve reserveringen en meld ze af.",
+    "default_title": "Visitor Parking",
+    "service": "Dienst",
+    "all_services": "Alle diensten",
+    "title": "Titel (optioneel)",
+    "set_entity_error": "Selecteer een `configuratie-item` in de editor, of stel handmatig `config_entry_id` in",
+    "entity_not_found": "Entiteit niet gevonden: {entity}",
+    "no_active_reservations": "Geen actieve reserveringen",
+    "reservation_fallback_label": "Reservering",
+    "end": "Afmelden"
+  },
+  "new_reservation_card": {
+    "card_name": "Visitor Parking - nieuwe reservering",
+    "card_description": "Maak een nieuwe reservering met favorieten.",
+    "default_title": "Nieuwe reservering",
+    "set_meldnummer_error": "Selecteer een dienst om verder te gaan.",
+    "missing_favorites_warning": "Geen favorieten gevonden voor deze dienst.",
+    "service": "Dienst",
+    "service_placeholder": "Selecteer een dienst",
+    "select_service_error": "Selecteer een dienst voordat je verdergaat.",
+    "favorites": "Favorieten",
+    "favorite_fallback_label": "Favoriet",
+    "name": "Naam",
+    "license_plate_required": "Kenteken (verplicht)",
+    "add_to_favorites": "Aan favorieten toevoegen",
+    "remove_favorite": "Favoriet verwijderen",
+    "update_favorite": "Favoriet bijwerken",
+    "check_in": "Aanmelden",
+    "submit": "Aanmelden",
+    "license_plate_required_error": "Vul een kenteken in",
+    "favorite_name_required_error": "Vul een naam in om de favoriet op te slaan",
+    "could_not_save_favorite": "Favoriet opslaan mislukt",
+    "could_not_remove_favorite": "Favoriet verwijderen mislukt",
+    "could_not_update_favorite": "Favoriet bijwerken mislukt",
+    "could_not_submit": "Reservering opslaan mislukt"
+  }
+}
